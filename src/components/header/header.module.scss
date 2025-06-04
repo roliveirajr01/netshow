@@ -1,0 +1,104 @@
+.header {
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 24px;
+}
+
+.navToggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  display: block;
+  cursor: pointer;
+}
+
+.nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #111;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.nav.open {
+  display: flex;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navItem:last-child {
+  margin-bottom: 0;
+}
+
+.rightIcons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatarIcon {
+  background-color: rgba(117, 117, 117, 1);
+  border-radius: 50%;
+  padding: 5px 8px;
+  svg {
+    position: relative;
+    top: 2px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navToggle {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .navList {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .navItem {
+    margin: 0;
+    font-size: 0.95rem;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

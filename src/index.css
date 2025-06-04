@@ -1,3 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+font-family: "Nunito Sans", sans-serif;
+font-optical-sizing: auto;
+font-variation-settings:
+  "wdth" 100,
+  "YTLC" 500;
+font-size: 16px;
+padding: 0;
+margin: 0;
+background-color: rgba(19, 19, 19, 1);
+color: #fff;
+}

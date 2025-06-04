@@ -1,5 +1,8 @@
 export default {
   testEnvironment: 'node',
+  testMatch: [
+    '**/?(*.)+(spec|test).[tj]s?(x)',
+  ],
   transform: {
     '^.+\\.tsx?$': ['ts-jest', { useESM: true }],
   },

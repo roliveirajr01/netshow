@@ -1,0 +1,145 @@
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.videoElement {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.playButtonLarge {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.2s, background 0.2s;
+  
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  &:hover {
+    background: rgba(230, 0, 0, 0.8);
+    transform: scale(1.1);
+  }
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 15px;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.controlsInner {
+  display: flex;
+  align-items: center;
+}
+
+.controlButton {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+  
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.progressContainer {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.progress {
+  height: 100%;
+  background: #007bff;
+}
+
+.controlGroup {
+  display: flex;
+  gap: 10px;
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 15;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #007bff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
