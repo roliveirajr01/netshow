@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
+import usePlayerStore from '@store/usePlayerStore';
 import styles from './progress-bar-movie.module.scss';
-import usePlayerStore from '../../store/usePlayerStore';
 
 const ProgressBarMovie: React.FC = () => {
   const progressBarRef = useRef<HTMLDivElement>(null);

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, type RefObject } from 'react';
 import Hls from 'hls.js';
+import usePlayerStore from '@store/usePlayerStore';
+import ControlMovie from '@components/control-movie/control-movie';
+import type { MoviePlayerProps } from '@models/movie-player';
 import styles from './movie-player.module.scss';
-import usePlayerStore from '../../store/usePlayerStore';
-import ControlMovie from '../control-movie/control-movie';
-import type { MoviePlayerProps } from '../../models/movie-player';
 
 const MoviePlayer: React.FC<MoviePlayerProps> = ({ videoSrc, thumbnail }) => {
   const {

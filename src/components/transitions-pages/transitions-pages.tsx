@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import type { PageTransitionProps } from '../../models/transition-pages';
+import type { PageTransitionProps } from '@models/transition-pages';
 
 const PageTransition = ({ children }: PageTransitionProps) => {
   return (

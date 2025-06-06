@@ -1,59 +1,15 @@
+import { PlayerState } from '@models/store';
 import { create } from 'zustand';
-import type { RefObject } from 'react';
-
-interface PlayerState {
-  // Referências DOM
-  videoRef: RefObject<HTMLVideoElement> | null;
-  progressBarRef: RefObject<HTMLDivElement> | null;
-  volumeContainerRef: RefObject<HTMLDivElement> | null;
-  settingsMenuRef: RefObject<HTMLDivElement> | null;
-  containerRef: RefObject<HTMLDivElement> | null;
-
-  // Estados do player
-  isLoading: boolean;
-  isPlaying: boolean;
-  volume: number;
-  isMuted: boolean;
-  playbackRate: number;
-  currentTime: number;
-  duration: number;
-  showSettings: boolean;
-  showControls: boolean;
-
-  // Setters de referência
-  setVideoRef: (ref: RefObject<HTMLVideoElement> | null) => void;
-  setProgressBarRef: (ref: RefObject<HTMLDivElement> | null) => void;
-  setVolumeContainerRef: (ref: RefObject<HTMLDivElement> | null) => void;
-  setSettingsMenuRef: (ref: RefObject<HTMLDivElement> | null) => void;
-  setContainerRef: (ref: RefObject<HTMLDivElement> | null) => void;
-  setIsLoading: (loading: boolean) => void;
-
-  // Setters de estado
-  setIsPlaying: (playing: boolean) => void;
-  setVolume: (v: number) => void;
-  toggleMute: () => void;
-  setPlaybackRate: (rate: number) => void;
-  setCurrentTime: (t: number) => void;
-  setDuration: (d: number) => void;
-  setShowSettings: (b: boolean) => void;
-  setShowControls: (b: boolean) => void;
-
-  // Ações
-  togglePlay: () => void;
-  seekTo: (t: number) => void;
-}
 
 let controlsTimeout: NodeJS.Timeout | null = null;
 
 const usePlayerStore = create<PlayerState>((set, get) => ({
-  // Inicializar referências
   videoRef: null,
   progressBarRef: null,
   volumeContainerRef: null,
   settingsMenuRef: null,
   containerRef: null,
 
-  // Inicializar estados
   isLoading: true,
   isPlaying: false,
   volume: 0.7,
@@ -64,7 +20,6 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
   showSettings: false,
   showControls: true,
 
-  // Setters de referência
   setVideoRef: (ref) => set({ videoRef: ref }),
   setProgressBarRef: (ref) => set({ progressBarRef: ref }),
   setVolumeContainerRef: (ref) => set({ volumeContainerRef: ref }),
@@ -72,7 +27,6 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
   setContainerRef: (ref) => set({ containerRef: ref }),
   setIsLoading: (loading) => set({ isLoading: loading }),
 
-  // Setters de estado
   setIsPlaying: (playing) => set({ isPlaying: playing }),
   setVolume: (v) => {
     const video = get().videoRef?.current;
@@ -106,7 +60,6 @@ const usePlayerStore = create<PlayerState>((set, get) => ({
     }
   },
 
-  // Ações
   togglePlay: () => {
     const video = get().videoRef?.current;
     if (!video) return;

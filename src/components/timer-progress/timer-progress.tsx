@@ -1,8 +1,8 @@
 import React from 'react';
-import formatTime from '../../helpers/format-time';
-import usePlayerStore from '../../store/usePlayerStore';
+import formatTime from '@helpers/format-time';
+import usePlayerStore from '@store/usePlayerStore';
 import styles from './timer-progress.module.scss';
-import type { TimerProgressProps } from '../../models/movie-player';
+import type { TimerProgressProps } from '@models/movie-player';
 
 const TimerProgress: React.FC<TimerProgressProps> = ({ children }) => {
   const currentTime = usePlayerStore((s) => s.currentTime);

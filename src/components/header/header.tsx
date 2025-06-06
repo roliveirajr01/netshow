@@ -1,4 +1,4 @@
-import styles from './Header.module.scss';
+import styles from './header.module.scss';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SearchIcon, AvatarIcon } from '@icons';

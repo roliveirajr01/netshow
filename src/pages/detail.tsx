@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useParams, useNavigate } from 'react-router-dom';
+import MoviePlayer from '@components/movie-player/movie-player';
+import NotFoundMovie from '@components/not-found-movie/not-found-movie';
+import LoadingSpinner from '@components/loading-spinner/loading-spinner';
+import type { VideoDetail } from '@models/movie-player';
 import api from '../services/api';
-import MoviePlayer from '../components/movie-player/movie-player';
-import NotFoundMovie from '../components/not-found-movie/not-found-movie';
-import LoadingSpinner from '../components/loading-spinner/loading-spinner';
-import type { VideoDetail } from '../models/movie-player';
 
 const Detail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

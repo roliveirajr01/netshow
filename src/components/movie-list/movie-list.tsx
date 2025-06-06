@@ -2,18 +2,18 @@ import { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import Hls from 'hls.js';
+import GetMovieByCategory from '@api/get-video-by-category';
+import Skeleton from '@components/skeleton/skeleton';
+import CATEGORY_MAPPINGS from '@helpers/category-mapping';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { slugify } from '@helpers';
+import type { MediaItem, PropsMovieList } from '@models/movie-player';
 import styles from './movie-list.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './swiper-overrides.scss';
-import GetMovieByCategory from '../../api/get-video-by-category';
-import Skeleton from '../skeleton/skeleton';
-import CATEGORY_MAPPINGS from '../../helpers/category-mapping';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { slugify } from '../../helpers/slugify';
-import type { MediaItem, PropsMovieList } from '../../models/movie-player';
 
 
 const MovieList = (props: PropsMovieList) => {
