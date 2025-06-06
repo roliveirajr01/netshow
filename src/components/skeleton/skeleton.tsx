@@ -1,5 +1,6 @@
+import React from 'react'
 import styles from './skeleton.module.scss'
-const Skeleton = () => {
+const Skeleton: React.FC = () => {
   return (
     <div className={styles.skeletonCard}>
       <div className={styles.skeletonThumbnail} />

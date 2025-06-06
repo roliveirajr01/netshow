@@ -5,8 +5,11 @@ import { SearchIcon, AvatarIcon } from '@icons';
 import { desktopItemVariants, mobileItemVariants, mobileMenuVariants } from '@helpers';
 import { useNavigate } from 'react-router-dom';
 import { menuItems } from './menu-items';
+import { HeaderProps } from '@models/header';
 
-const Header = () => {
+
+const Header: React.FC<HeaderProps> = ({ isHome = false }) => {
+
   const [navOpen, setNavOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate()
@@ -19,7 +22,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isHome ? styles.isHome : ''}`}>
       <button
         className={styles.navToggle}
         onClick={() => setNavOpen(!navOpen)}

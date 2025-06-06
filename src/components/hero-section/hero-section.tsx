@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import styles from './hero-section.module.scss';
 import { PlayIcon } from '@icons';
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   const swiperContainerRef = useRef<HTMLDivElement>(null);
   function triggerBulletAnimation() {
     if (!swiperContainerRef.current) return;

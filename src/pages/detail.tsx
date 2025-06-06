@@ -5,6 +5,8 @@ import NotFoundMovie from '@components/not-found-movie/not-found-movie';
 import LoadingSpinner from '@components/loading-spinner/loading-spinner';
 import type { VideoDetail } from '@models/movie-player';
 import api from '../services/api';
+import { InfosMovie } from '@components';
+import InstitutionalText from '@components/institutional-text/institutional-text';
 
 const Detail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -69,12 +71,23 @@ const Detail: React.FC = () => {
       </NotFoundMovie>
     );
   }
-
+  console.log('video', video)
   return (
-    <MoviePlayer
-      videoSrc={video.hls_path}
-      thumbnail={video.thumbnail}
-    />
+    <>
+      <MoviePlayer
+        videoSrc={video.hls_path}
+        thumbnail={video.thumbnail}
+      />
+      <InfosMovie
+        title={video.title}
+        likes={video.likes}
+        description={video.description}
+        date={video.created_at}
+        id={video.category}
+        category={video.category}
+      />
+      <InstitutionalText />
+    </>
   );
 };
 

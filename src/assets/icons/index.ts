@@ -7,3 +7,10 @@ export { default as PlayerIcon } from './player-icon'
 export { default as SettingsIcon } from './settings-icon'
 export { default as VolumeIcon } from './volume-icon'
 export { default as PlayerThumbIcon } from './player-thumb-icon'
+export { default as SaveIcon } from './save-icon'
+export { default as DislikeIcon } from './dislike-icon'
+export { default as LikeIcon } from './like-icon'
+export { default as ShareIcon } from './share-icon'
+
+
+// export { default as  } from ''

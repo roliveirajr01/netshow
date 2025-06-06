@@ -1,17 +1,17 @@
-$black-color: #141414;
-$white-color: #ffffff;
-
 .header {
-  background-color: $black-color;
-  color: white;
+  color: $white-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 4rem;
+  padding: 1.3rem 4rem;
   position: relative;
   flex-wrap: wrap;
+  background-color: $gray-high-color;
+  &.isHome {
+    background-color: $black-color;
+  }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     padding: 1rem 2rem;
   }
 }

@@ -4,7 +4,7 @@ import VolumeIcon from '@assets/icons/volume-icon';
 import usePlayerStore from '@store/usePlayerStore';
 import styles from './volume-movie.module.scss'
 
-const VolumeMovie = () => {
+const VolumeMovie: React.FC = () => {
   const {
     volume,
     isMuted,

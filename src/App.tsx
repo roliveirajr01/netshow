@@ -4,6 +4,13 @@ import { Header, Footer, PageTransition } from '@components';
 import { AnimatePresence } from 'framer-motion';
 import { Home, Detail } from './pages';
 
+const HeaderWithHomeClass = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  return <Header isHome={isHome} />;
+};
+
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -35,7 +42,7 @@ const AnimatedRoutes = () => {
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Header />
+      <HeaderWithHomeClass />
       <AnimatedRoutes />
       <Footer />
     </BrowserRouter>

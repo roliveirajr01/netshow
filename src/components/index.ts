@@ -12,5 +12,9 @@ export { default as ProgressBarMovie } from './progress-bar-movie/progress-bar-m
 export { default as TimerProgress } from './timer-progress/timer-progress'
 export { default as VolumeMovie } from './volume-movie/volume-movie'
 export { default as CardItems } from './card-items/card-items'
+export { default as InfosMovie } from './infos-movie/infos-movie'
+
+
+
 
 // export { default as } from ''
