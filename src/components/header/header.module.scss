@@ -1,5 +1,5 @@
 .header {
-  background-color: #000;
+  background-color: $black-color;
   color: white;
   display: flex;
   align-items: center;
@@ -97,7 +97,7 @@
     margin: 0;
     font-size: 0.95rem;
     a {
-      color: #fff;
+      color: $white-color;
       text-decoration: none;
     }
   }

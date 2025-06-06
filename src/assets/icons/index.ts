@@ -1,0 +1,8 @@
+export { default as AvatarIcon } from './avatar-icon'
+export { default as SearchIcon } from './search-icon'
+export { default as PlayIcon } from './play-icon'
+export { default as FullScreenIcon } from './fullscreen-icon'
+export { default as PauseIcon } from './pause-icon'
+export { default as PlayerIcon } from './player-icon'
+export { default as SettingsIcon } from './settings-icon'
+export { default as VolumeIcon } from './volume-icon'

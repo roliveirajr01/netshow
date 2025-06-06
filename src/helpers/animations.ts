@@ -1,5 +1,5 @@
 
-export const navVariants = (distance: number) => ({
+const navVariants = (distance: number) => ({
   hidden: {
     opacity: 0,
     y: distance
@@ -12,3 +12,5 @@ export const navVariants = (distance: number) => ({
     },
   },
 });
+
+export default navVariants

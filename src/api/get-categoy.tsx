@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
-
-interface Category {
-  id: string;
-  title: string;
-  site_id: number;
-}
+import type { Category } from "../models/categories";
 
 function GetCategories() {
   const [data, setData] = useState<Category[]>([]);

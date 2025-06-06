@@ -1,9 +1,5 @@
 import { motion } from 'framer-motion';
-import type { ReactNode } from 'react';
-
-interface PageTransitionProps {
-  children: ReactNode;
-}
+import type { PageTransitionProps } from '../../models/transition-pages';
 
 const PageTransition = ({ children }: PageTransitionProps) => {
   return (

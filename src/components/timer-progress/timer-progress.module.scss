@@ -1,0 +1,12 @@
+
+.timerProgress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+}
+
+.timeDisplay {
+  color: $white-color;
+  font-size: 0.875rem;
+}

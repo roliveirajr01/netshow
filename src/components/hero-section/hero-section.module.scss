@@ -3,10 +3,10 @@
   position: relative;
   padding: 2rem 1rem;
   background-color: #0c0c0c;
-  color: #fff;
+  color: $white-color;
 
   @media (min-width: 768px) {
-    padding: 0 2rem;
+    padding: 4rem 2rem;
   }
 
 

@@ -1,0 +1,44 @@
+
+.volumeContainer {
+  position: relative;
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.volumeSlider {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  margin-left: 5px;
+}
+
+.volumeLevel {
+  width: 100%;
+  background: $blue-color;
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+
+.volumeThumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: $white-color;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.volumeButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: $white-color;
+}

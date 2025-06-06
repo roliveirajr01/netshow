@@ -1,0 +1,32 @@
+
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $black-color;
+  color: $white-color;;
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background: #007bff;
+    color: $white-color;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #0069d9;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import styles from './Header.module.scss';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SearchIcon, AvatarIcon } from '../../assets';
-import { navVariants } from '../../helpers/animations';
+import { SearchIcon, AvatarIcon } from '@icons';
+import { navVariants } from '@helpers';
 
 const menuItems = [
   { label: 'Categorias', href: '#' },

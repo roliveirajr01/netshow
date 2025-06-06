@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import styles from './hero-section.module.scss';
-import { PlayIcon } from '../../assets';
+import { PlayIcon } from '../../assets/icons';
 
 const HeroSection = () => {
   const swiperContainerRef = useRef<HTMLDivElement>(null);
