@@ -20,7 +20,7 @@ const Header = () => {
     <header className={styles.header}>
       <button
         className={styles.navToggle}
-        onClick={() => setNavOpen((prev) => !prev)}
+        onClick={() => setNavOpen(!navOpen)}
         aria-label="Toggle navigation menu"
       >
         &#9776;

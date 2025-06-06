@@ -14,6 +14,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './swiper-overrides.scss';
+import { PlayerThumbIcon } from '@icons';
 
 
 const MovieList = (props: PropsMovieList) => {
@@ -144,6 +145,9 @@ const MovieList = (props: PropsMovieList) => {
                   onMouseLeave={handleMouseLeave}
                   className={styles.cardContent}
                 >
+                  <div className={styles.playerThumb}>
+                    <PlayerThumbIcon />
+                  </div>
                   <div className={styles.mediaContainer}>
                     <video
                       ref={(el) => {
