@@ -1,3 +1,6 @@
+$black-color: #141414;
+$white-color: #ffffff;
+
 .header {
   background-color: $black-color;
   color: white;
@@ -6,6 +9,11 @@
   justify-content: space-between;
   padding: 1.5rem 4rem;
   position: relative;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    padding: 1rem 2rem;
+  }
 }
 
 .logo {
@@ -14,37 +22,94 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  &::before {
+    content: '';
+    background-color: $blue-color;
+    display: block;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: width .3s ease;
+  }
+  div {
+    width: 16px;
+    height: 16px;
+    background: $gray-light-color;
+    border-radius: 4px;
+    transition: background .3s ease;
+  }
+  &:hover {
+    div {
+      background: $blue-color;
+      transition: background .3s ease;
+    }
+    &::before { 
+      width: 100%;
+      transition: width .3s ease;
+    }
+  }
 }
 
 .navToggle {
   background: none;
   border: none;
-  color: white;
-  font-size: 1.5rem;
+  color: $white-color;
+  font-size: 1.8rem;
   display: block;
   cursor: pointer;
+  z-index: 101;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  span {
+    position: absolute;
+  }
 }
 
 .nav {
   display: none;
-  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.navMobile {
+  width: 100%;
+  background-color: $black-color;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  background-color: #111;
-  padding: 1rem;
   z-index: 100;
-}
-
-.nav.open {
-  display: flex;
+  overflow: hidden;
+  
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .navList {
   list-style: none;
-  padding: 0;
+  padding: 1rem;
   margin: 0;
+  display: flex;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
 }
 
 .navItem {
@@ -52,29 +117,60 @@
   font-size: 1rem;
   color: white;
   text-decoration: none;
+  position: relative;
+  
   a {
     color: $white-color;
     text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    position: relative;
   }
-}
 
-.navItem:last-child {
-  margin-bottom: 0;
+  @media (min-width: 768px) {
+    margin: 0 1rem;
+    font-size: 0.95rem;
+    
+    a {
+      padding: 5px 10px;
+    }
+  }
 }
 
 .rightIcons {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.8rem;
+  z-index: 101;
+  * {
+    cursor: pointer
+  }
 }
 
 .avatarIcon {
   background-color: rgba(117, 117, 117, 1);
   border-radius: 50%;
   padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: $blue-color;
+    svg {
+      path{
+        transition: fill .3s ease;
+        fill: $white-color;
+      }
+    }
+  }
+  
   svg {
     position: relative;
-    top: 2px;
+    transition: fill .3s ease;
+  }
+
+  @media (min-width: 768px) {
+    padding: 8px 8px;
   }
 }
 
@@ -83,30 +179,31 @@
     display: none;
   }
 
-  .nav {
-    position: static;
-    display: flex !important;
-    flex-direction: row;
-    background: none;
-    padding: 0;
-    gap: 1.5rem;
-  }
-
   .navList {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
+    padding: 0;
   }
 
   .navItem {
-    margin: 0;
-    font-size: 0.95rem;
-    a {
-      color: $white-color;
-      text-decoration: none;
+    position: relative;
+    &::before {
+      content: '';
+      background-color: $blue-color;
+      display: block;
+      width: 0;
+      height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: width .3s ease;
     }
-  }
 
-  .avatarIcon {
-    padding: 5px 8px;
+    &:hover {
+      &::before {
+        width: 100%;
+        transition: width .3s ease;
+      }
+    }
   }
 }

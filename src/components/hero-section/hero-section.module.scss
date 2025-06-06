@@ -20,13 +20,13 @@
   }
 
   :global(.swiper-pagination-bullet) {
-    background: #888;
+    background: $gray-color;
     opacity: 1;
   }
 
   :global(.swiper-pagination-bullet-active) {
     background: #fff;
-    background: linear-gradient(to left, gray 50%, #fff 50%);
+    background: linear-gradient(to left, $gray-color 50%, $white-color 50%);
     background-size: 200% 100%;
     background-position: right;
     border-radius: 3px;
