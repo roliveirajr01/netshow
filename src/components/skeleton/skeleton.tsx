@@ -6,6 +6,7 @@ const Skeleton = () => {
       <div className={styles.skeletonContent}>
         <div className={styles.skeletonTitle} />
         <div className={styles.skeletonTitle} />
+        <div className={styles.skeletonTitle} />
       </div>
     </div>
   )

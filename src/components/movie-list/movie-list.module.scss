@@ -1,10 +1,15 @@
+$white-color: #ffffff;
+
 .movieList {
   padding: 0 16px 24px;
   margin-bottom: 24px;
   width: 100%;
   overflow: hidden;
-  padding-left: 4rem;
+  padding-left: 1.5rem;
   box-sizing: border-box;
+  @media (min-width: 768px) {
+    padding-left: 4rem;
+  }
 }
 
 .sectionTitle {
@@ -26,108 +31,4 @@
   width: auto !important;
 }
 
-.card {
-  max-width: 400px;
-  min-width: 300px;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #1a1a1a;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  position: relative;
-  .playerThumb {
-    display: block;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    right: 0;
-    transition: all .7s ease;
-    svg {
-      width: 100%;
-      height: 100%;
-      opacity: .1;
-      transition: all .7s ease;
-    }
-  }
-  &:hover {
-    .playerThumb {
-      width: 34px;
-      height: 34px;
-      top: 5px;
-      right: 5px;
-      transition: all .7s ease;
-      svg {
-        opacity: 1;
-        transition: all .7s ease;
-      }
-    }
-  }
-}
 
-.cardContent {
-  position: relative;
-  overflow: hidden;
-}
-
-.mediaContainer {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.thumbnail {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-}
-
-.videoPreview {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.videoVisible {
-  opacity: 1;
-}
-
-.categoryTag {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  background: rgba(0, 0, 0, 0.6);
-  color: $white-color;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 3px;
-  z-index: 3;
-}
-
-.title {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.4;
-  padding: 12px;
-  margin: 0;
-  color: $white-color;
-  min-height: 76px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
