@@ -2,7 +2,7 @@
   overflow: hidden;
   position: relative;
   padding: 2rem 1rem;
-  background-color: #0c0c0c;
+  background-color: $black-medium-color;
   color: $white-color;
 
   @media (min-width: 768px) {
@@ -69,7 +69,7 @@
 
 .label {
   display: block;
-  color: rgba(255, 255, 255, 0.7);
+  color: $white-transparent-color;
   margin-bottom: 0.5rem;
   letter-spacing: 0.15px;
   font-weight: lighter;
@@ -97,7 +97,7 @@
 .description {
   font-size: 1rem;
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: $white-transparent-color;
   letter-spacing: 0.15px;
   font-weight: lighter;
 
@@ -111,21 +111,24 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: rgba(255, 255, 255, 1);
-  color: rgba(0, 0, 0, 1);
+  background-color: $white-color;
+  color: $black-color;
   border: none;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  transform: scale(1);
 
   svg {
     fill: currentColor;
   }
 
   &:hover {
-    background-color: #e03b3b;
+    background-color: $blue-color;
+    color: $white-color;
+    transform: scale(1.1);
   }
 }

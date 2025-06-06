@@ -140,17 +140,21 @@ $white-color: #ffffff;
 .rightIcons {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  gap: 1rem;
   z-index: 101;
   * {
     cursor: pointer
+  }
+
+  @media (min-width: 768px) {
+    gap: 1.8rem;
   }
 }
 
 .avatarIcon {
   background-color: rgba(117, 117, 117, 1);
   border-radius: 50%;
-  padding: 2px 5px;
+  padding: 2px 2px;
   display: flex;
   align-items: center;
   justify-content: center;
