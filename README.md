@@ -30,7 +30,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Instale e use a versão 24.x do Node
 nvm install 24
-nvm use 24
+nvm use 24 || nvm use
 
 # Verifique
 node -v  # deve exibir v24.x.x
