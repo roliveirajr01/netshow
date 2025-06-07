@@ -51,7 +51,7 @@ cd netshow
 ````
 
 2. Instale as dependências:
-   ```bash
+   ```
 npm install
 ````
 
