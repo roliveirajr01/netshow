@@ -141,12 +141,13 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background: #222;
-  border: 1px solid #444;
+  background-color: $black-color;
+  border: 1px solid $gray-light-color;
   border-radius: 4px;
   padding: 0.5rem;
   margin-top: 0.25rem;
   z-index: 30;
+  width: 140px;
 }
 
 .settingsHeader {
@@ -172,11 +173,12 @@
 }
 
 .settingsOption:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: $gray-light-color;
 }
 
 .settingsOption.active {
-  color: #e50914;
+  color: $blue-color;
+  font-weight: bold;
 }
 
 .fullscreenButton {
