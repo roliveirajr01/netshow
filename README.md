@@ -91,7 +91,7 @@ netshow/
 │   ├── models/           # Tipagens TypeScript
 │   ├── pages/            # Páginas (Home, Detail)
 │   ├── services/         # Implementação do axios
-│   ├── store/            # Controle geral da reprodução de video
+│   ├── store/            # Controle dos estados de controle de video
 │   ├── App.tsx
 │   └── main.tsx          # Ponto de entrada
 ├── db.json               # Mock de dados do JSON-Server
