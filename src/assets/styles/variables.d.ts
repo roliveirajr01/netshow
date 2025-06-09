@@ -1,4 +1,3 @@
-// src/styles/variables.d.ts
 export {};
 
 declare module '*.scss' {

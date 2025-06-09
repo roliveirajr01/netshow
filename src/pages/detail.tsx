@@ -80,11 +80,11 @@ const Detail: React.FC = () => {
       />
       <InfosMovie
         title={video.title}
-        likes={video.likes}
+        likes={`${video.likes}`}
         description={video.description}
         date={video.created_at}
-        id={video.category}
-        category={video.category}
+        id={`${video.category}`}
+        category={`${video.category}`}
       />
       <InstitutionalText />
     </>

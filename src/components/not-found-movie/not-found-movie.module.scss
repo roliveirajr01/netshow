@@ -16,7 +16,7 @@
   }
 
   button {
-    background: #007bff;
+    background: $blue-color;
     color: $white-color;
     border: none;
     padding: 12px 25px;
@@ -26,7 +26,7 @@
     transition: background 0.3s;
 
     &:hover {
-      background: #0069d9;
+      background: $blue-color;
     }
   }
 }
